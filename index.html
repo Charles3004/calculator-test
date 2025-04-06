@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="icons">
+            <button id="clock-btn">
+                    <img src="images/clock-icon.png" alt="Clock Icon" style="width: 24px; height: 24px;">
+            </button>                
+            <button id="ruler-btn">
+                    <img src="images/icons8-ruler-32.png" alt="Ruler Icon" style="width: 24px; height: 24px;">
+            </button>                
+            <button id="converter-btn">
+                <img src="images/icons8-calculator-32.png" alt="Converter Icon" style="width: 24px; height: 24px;">
+            </button>
+            <button id="clear-btn">
+                <img src="images/icons8-clear-symbol-24.png" alt="Clear Icon" style="width: 24px; height: 24px;">
+            </button>
+                          
+        </div>
+        
+            <!-- Hidden Menu for Converter -->
+        <div id="converter-menu" class="hidden">
+            <button onclick="appendToDisplay('√(')">√</button>
+            <button onclick="appendToDisplay('^2')">x²</button>
+            <button onclick="appendToDisplay('≈')">≈</button>
+            <button onclick="appendToDisplay('x!')">x!</button>
+        </div>
+        
+        <div class="divider"></div> <!-- Separation line -->
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="clear">C</button>
+            <button onclick="appendBracket()">()</button>
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="appendToDisplay('/')">/</button>
+
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+
+            <button onclick="toggleSign()">+/-</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculateResult()" class="equal">=</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
